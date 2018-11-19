@@ -1,0 +1,63 @@
+.content-profile{
+	width: 80%;
+    position: fixed;
+    left: 20%;
+    top: 9%;
+    bottom: 0;
+    background: #fff;
+    overflow-y: auto;
+    height: 50%;
+}
+
+#dp{
+    height: 150px;
+    width: 150px;
+}
+
+.content-photo{
+    text-align: center;
+	width: 30%;
+    position: fixed;
+    left: 20%;
+    top: 9%;
+    bottom: 0;
+    background: #fff;
+    overflow-y: auto;
+    height: 50%;
+    padding: 20px;
+    object-fit: contain;
+}
+
+.content-details{
+	width: 50%;
+    position: fixed;
+    left: 50%;
+    top: 9%;
+    bottom: 0;
+    background: #fff;
+    overflow-y: auto;
+    height: 50%;
+    padding: 20px;
+}
+
+.content-change-password{
+	width: 80%;
+    position: fixed;
+    left: 20%;
+    top: 59%;
+    bottom: 0;
+    background: #fff;
+    overflow-y: auto;
+    height: 41%;
+    padding: 20px;
+}
+
+#change_pass_old {
+    width: 200px;
+}
+#change_pass_new {
+    width: 200px;
+}
+#change_pass_new_confirm {
+    width: 200px;
+}

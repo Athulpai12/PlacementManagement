@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Placement Portal</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Cache-Control" content="no-store" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://is2-ssl.mzstatic.com/image/thumb/Purple118/v4/dc/a0/54/dca0545b-bcdb-9c2a-b580-300221da1eda/source/512x512bb.jpg">
+        <link href="css/font-face.css" rel="stylesheet" media="all">
+        <link href="framework/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link href="framework/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+        <link href="framework/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+        <link href="framework/animsition/animsition.min.css" rel="stylesheet" media="all">
+        <link href="framework/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+        <link href="css/theme.css" rel="stylesheet" media="all">
+        <link href="css/Add.css" rel="stylesheet" media="all">
+
+        <script src="framework/jquery-3.2.1.min.js"></script>
+        <script src="js/ajaxForm.js"></script>
+
+        <!-- Bootstrap JS-->
+        <script type="text/javascript" src="js/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="js/typeahead.min.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/bootstrap3-typeahead.min.js"></script>  
+    </head>
+    <body class="animsition">
+         <div class="page-wrapper">
+            <aside class="menu-sidebar d-none d-lg-block">
+                <div class="logo"<div class="logo" style="background-color: white;">>
+                    <a href="#">
+                        <img src="images/PES_logo.png" alt="Placements" class="Left-corner-img" />
+                    </a>
+                </div>
+                <div class="menu-sidebar__content js-scrollbar1">
+                    <nav class="navbar-sidebar">
+                        <ul class="list-unstyled navbar__list">
+                            <li>
+                                <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            </li>
+                             <li>
+                                <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
+                            </li>
+                            <li>
+                                <a href="analytics.html"><i class="fas fa-chart-bar"></i>Analytics</a>
+                            </li>
+                            <li class="active has-sub">
+                                <a class="js-arrow" href="#"><i class="far fa-check-square"></i>Forms</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <div class="page-container">
+                <header class="header-desktop">
+                    <div class="section__content section__content--p30">
+                        <div class="container-fluid">
+                            <div class="header-wrap">
+                                <form class="form-header" action="search.php" method="GET">
+                                    <input class="au-input au-input--xl" type="text" name="search" id="student_search_data" class="typeahead" data-provide="typeahead" autocomplete="off" placeholder="Search" />
+                                    <button class="au-btn--submit" id="student_search_data_submit" type="submit">
+                                        <i class="zmdi zmdi-search"></i>
+                                    </button>
+                                </form>
+                                <div class="header-button">      
+                                    <div class="account-wrap">
+                                        <div class="account-item clearfix js-item-menu">
+                                            <div class="image">
+                                                <img id="user_photo_poster" />
+                                            </div>
+                                            <div class="content">
+                                                <a class="js-acc-btn" id="header_dropdown_name_hyperlink" href="#">John Doe</a>
+                                            </div>
+                                            <div class="account-dropdown js-dropdown">
+                                                <div class="info clearfix">
+                                                    <div class="image">
+                                                        <a href="#">
+                                                            <img id="user_photo_dropdown"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h5 class="name">
+                                                            <span id="header_dropdown_name">User</span>
+                                                        </h5>
+                                                        <span id="header_dropdown_email">user@mail.com</span>
+                                                    </div>
+                                                </div>
+                                                <div id="logout" class="account-dropdown__footer">
+                                                    <a href="../logout.php">
+                                                        <i class="zmdi zmdi-power"></i>Logout</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- MAIN CONTENT-->
+                <div class="main-content">
+                    <div class="section__content section__content--p30">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="control" >
+                                    <div class="card-header">
+                                        <h4>Create Form</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="custom-tab" style="height:700px;width: 700px">
+                                            <nav align="center">
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <a class="nav-item nav-link active" id="custom-nav-home-tab" data-toggle="tab" href="#custom-nav-home" role="tab" aria-controls="custom-nav-home"
+                                                     aria-selected="true">Form</a>
+                                                    <a class="nav-item nav-link" id="custom-nav-profile-tab" data-toggle="tab" href="#custom-nav-profile" role="tab" aria-controls="custom-nav-profile"
+                                                     aria-selected="false">Responses</a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="custom-nav-home" role="tabpanel" aria-labelledby="custom-nav-home-tab">
+                                                <div class="custom_div">
+                                                    <div class="hide1" align="center">
+                                                        <div class="col-lg-6">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <strong >Company</strong>
+                                                                </div>
+                                                            <div class="card-body card-block">
+                                                                <div class="form-group">
+                                                                    <label for="company" class=" form-control-label">Company Name</label>
+                                                                    <input type="text" id="comnam" placeholder="Enter Company Name" class="form-control">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="company" class=" form-control-label">Job ID</label>
+                                                                    <input type="text" id="jobid" placeholder="Enter job ID" class="form-control">
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    <button type="submit" class="btn btn-success btn-sm" id="next">
+                                                                        <i class="fa"></i> Next
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+                                                </div>
+                                                <div class="hide2" align="center" >
+                                                    <div class="col-lg-6">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <strong>Admin</strong>
+                                                            </div>
+                                                            <div class="card-body card-block">
+                                                                <div class=default>
+                                                                    <h5> Default </h5>
+                                                                     <div class="form-group">
+                                                                        <label for="company" class=" form-control-label">Name</label>
+                                                                        <input type="text" id="GPA" placeholder="Enter Name" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="company" class=" form-control-label">Email</label>
+                                                                        <input type="text" id="GPA" placeholder="Enter Email" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="company" class=" form-control-label">USN</label>
+                                                                        <input type="text" id="GPA" placeholder="Enter USN" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="company" class=" form-control-label">GPA</label>
+                                                                        <input type="text" id="GPA" placeholder="Enter GPA" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="vat" class=" form-control-label">10th</label>
+                                                                        <input type="text" id="ten" placeholder="Enter 10th percentage" class="form-control">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="street" class=" form-control-label">12th</label>
+                                                                        <input type="text" id="twelve" placeholder="Enter 12th percentage" class="form-control">
+                                                                    </div>
+                                                                    <div class="row form-group">
+                                                                        <div class="col col-md-3">
+                                                                            <label for="selectSm" class=" form-control-label" align="center">Branch</label>
+                                                                            <br>
+                                                                            <br>
+                                                                        </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <select name="select" id="select" class="form-control">
+                                                                            <option value="0">Select Branch</option>
+                                                                            <option value="1">CSE</option>
+                                                                            <option value="2">ECE</option>
+                                                                            <option value="3">MECH</option>
+                                                                            <option value="4">EEE</option>
+                                                                            <option value="5">CIVIL</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- End of default -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="card">
+                                                        <div class="card-body card-block" style="float:right;">
+                                                            <div class=additional" >
+                                                                <h5> Add New Field</h5>
+                                                    <!-- <label for="select" class=" form-control-label">New Field</label> -->
+                                                                <button >
+                                                                    <img class="addsym" src="images\icon\add1.jpg" id="add" width="35px" height="35px" style="float: right;">
+                                                                </button>
+                                                                <script type="text/javascript">
+                                                                    $('#add').click(function(event){
+                                                                        console.log("hello");
+                                                                    /*    divadd = document.createElement("div")
+                                                                         $(divgroup).addClass("form-group").appendTo('.default');*/
+                                                                    /*------------------------------------------------------------------------------------------------------*/
+                                                                        newdiv = document.createElement("div")
+                                                                        //$(this).addClass
+                                                                        $(newdiv).addClass("new").appendTo('.default');
+                                                                        //i=i+1;
+                                                                    /*------------------------------------------------------------------------------------------------------*/
+                                                                        divgroup = document.createElement("div")
+                                                                        $(divgroup).addClass("form-group").appendTo('.default');
+
+                                                                     /*var html= '<div class="form-group">'+'<label for="street" class=" form-control-label">12th</label>'+'<input type="text" id="twelve" placeholder="Enter 12th percentage" class="form-control">'+'</div>';*/
+                                                                        var html =                                                  
+                                                                            '<div class="col-12 col-md-9" id="sel" style="float:right";>'+
+                                                                                '<select name="select" id="optt" class="form-control">'+
+                                                                                    '<option value="0">Please select</option>'+
+                                                                                    '<option value="resume" calss="resume">Resume</option>'+
+                                                                                    '<option value="degree" id="degree">Degree</option>'+
+                                                                                    '<option value="campus" id="campus">Campus</option>'+
+                                                                                    '<option value="Relocation" id="loc">Relocation</option>'+
+                                                                                    '<option value="position" id-"pos">position</option>'+
+                                                                                '</select>'+
+                                                                            '</div>';
+
+                                                                        $(html).appendTo($(divgroup));
+                                                                        $('select').change(function(event){
+                                                                            var val = $("#optt").val();
+                                                                            console.log(val);
+
+                                                                            if(val=="resume"){
+                                                                                var ihtml = 
+                                                                                    '<div class="f_resume">'+
+                                                                                        '<img class="close" src="images/icon/close.jpg">'+
+                                                                                        '<div class="col col-md-3">'+
+                                                                                            '<label for="file-input" class=" form-control-label">Resume</label>'+'<p>'+
+                                                                                        '</div>'+
+                                                                                        '<div class="col-12 col-md-9">'+
+                                                                                            '<input type="file" id="file-input" name="file-input" >'+
+                                                                                        '</div>'+
+                                                                                    '</div>';                               
+                                                                            }
+                                                                            else if(val=="degree"){
+                                                                                 var ihtml =  
+                                                                                    '<div class="f_degree">'+
+                                                                                        '<img class="close" src="images/icon/close.jpg">'+
+                                                                                        '<div class="col col-md-3">'+
+                                                                                            '<label for="selectSm" class=" form-control-label">Degree</label>'+
+                                                                                        '</div>'+   
+                                                                                        '<div class="col-12 col-md-9">'+
+                                                                                            '<select name="selectSm" id="SelectLm" class="form-control-sm form-control">'+
+                                                                                                '<option value="0">Degree</option>'+
+                                                                                                '<option value="1">B.Tech</option>'+
+                                                                                                '<option value="2">M.Tech</option>'+
+                                                                                                '<option value="5">MCA</option>'+
+                                                                                            '</select>'+
+                                                                                        '</div>'+
+                                                                                    '</div>';
+                                                                            }
+                                                                           else if(val=="campus"){
+                                                                                var ihtml =  
+                                                                                    '<div class="f_campus">'+
+                                                                                        '<img class="close" src="images/icon/close.jpg">'+
+                                                                                        '<div class="col col-md-3">'+
+                                                                                            '<label for="selectSm" class=" form-control-label">Campus</label>'+
+                                                                                        '</div>'+  
+                                                                                        '<div class="col col-md-9">'+
+                                                                                            '<div class="form-check-inline form-check">'+
+                                                                                                '<label for="inline-radio1" class="form-check-label ">'+ 
+                                                                                                    '<input type="radio" id="inline-radio1" name="inline-radios" value="PESU" class="form-check-input">PESU'+
+                                                                                                '</label>'+
+                                                                                                '<label for="inline-radio2" class="form-check-label ">'+
+                                                                                                    '<input type="radio" id="inline-radio2" name="inline-radios" value="PESIT_SC" class="form-check-input">PESIT_SC'+
+                                                                                                '</label>'+
+                                                                                            '</div>'+
+                                                                                        '</div>'+
+                                                                                    '</div>';
+                                                                            }
+                                                                            else if(val=="Relocation"){
+                                                                                var ihtml = 
+                                                                                    '<div class="f_Relocation">'+
+                                                                                        '<img class="close" src="images/icon/close.jpg">'+
+                                                                                          '<div class="col col-md-3">'+
+                                                                                            '<label for="selectSm" class=" form-control-label">Relocation</label>'+
+                                                                                        '</div>'+  
+                                                                                        '<div class="col col-md-9">'+
+                                                                                            '<div class="form-check-inline form-check">'+
+                                                                                                '<label for="inline-radio1" class="form-check-label ">'+ 
+                                                                                                    '<input type="radio" id="inline-radio1" name="inline-radios" value="1" class="form-check-input">YES'+
+                                                                                                '</label>'+
+                                                                                                '<label for="inline-radio2" class="form-check-label ">'+
+                                                                                                    '<input type="radio" id="inline-radio2" name="inline-radios" value="2" class="form-check-input">NO'+
+                                                                                                '</label>'+
+                                                                                            '</div>'+
+                                                                                        '</div>'+
+                                                                                    '</div>';
+                                                                            }
+                                                                            else if(val=="position"){
+                                                                                var ihtml=
+                                                                                    '<div class="f_position">'+
+                                                                                        '<img class="close" src="images/icon/close.jpg">'+
+                                                                                        '<div class="col col-md-3">'+
+                                                                                            '<label for="selectSm" class=" form-control-label">Position</label>'+
+                                                                                        '</div>'+  
+                                                                                        '<div class="col col-md-9">'+
+                                                                                            '<div class="form-check-inline form-check">'+
+                                                                                                '<label for="inline-radio1" class="form-check-label ">'+ 
+                                                                                                    '<input type="radio" id="inline-radio1" name="inline-radios" value="1" class="form-check-input">FTE+Intern'+
+                                                                                                '</label>'+
+                                                                                                '<label for="inline-radio2" class="form-check-label ">'+
+                                                                                                    '<input type="radio" id="inline-radio2" name="inline-radios" value="2" class="form-check-input">FTE'+
+                                                                                                '</label>'+
+                                                                                                '<label for="inline-radio2" class="form-check-label ">'+
+                                                                                                    '<input type="radio" id="inline-radio2" name="inline-radios" value="3" class="form-check-input">Intern'+
+                                                                                                '</label>'+
+                                                                                            '</div>'+
+                                                                                        '</div>'+
+                                                                                    '</div>';
+                                                                            }
+                                                                            $(ihtml).appendTo($(newdiv));
+                                                                            $("div").remove("#sel");
+                                                                            $('.close').each(function(event){
+                                                                                $("div").remove('.new');
+                                                                            });
+                                                                            /*     $('.close_degree').click(function(event){
+                                                                                      $("div").remove(".f_degree");
+                                                                                 });
+                                                                            */
+                                                                                  //$("div").remove("#sel");
+                                                                                 /* 
+                                                                                  var bre = '<br>'+'<p>';
+
+                                                                                   $(bre).appendTo($(newdiv));*/
+                                                                        });
+                                                                    });
+                                                                     </script>
+                                                                </div>
+                                                            </div> <!-- End of Main Div -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <button type="submit" class="btn btn-success btn-sm" id="sub" >
+                                                            <i class="fa"></i> Submit
+                                                        </button>
+                                                        <button type="reset" class="btn btn-danger btn-sm">
+                                                            <i class="fa fa-ban"></i> Reset
+                                                        </button>
+                                                    </div>
+                                                </div> <!-- End of hide 2 -->
+                                            </div>
+                                            <script type="text/javascript">
+                                                $('.hide2').hide();
+                                                $( '#next' ).click( function() {
+                                                    if((($('#comnam').val())=="") || (($('#jobid').val())=="")){
+                                                        alert("Please Enter both CompanyName and jobid")
+                                                    }
+                                                    else{
+                                                    $( '.hide1' ).hide();
+                                                    $( '.hide2' ).show();
+                                                }
+                                                });
+                                                $( '#sub' ).click( function() {
+                                                    var CompanyName = $('#comnam').val();
+                                                    var jobid= $('#jobid').val();
+                                                    //alert(jobid);
+                                                    //var d = document.getElementByClassName('hide2');
+                                                    var html = $("<div />").append($(".hide2").clone()).html();
+                                                    /*CompanyName=CompanyName.value*/
+                                                    //alert(html);
+                                                    //dataString = ['CompanyName','job_id','html'];
+                                                    //var jsonString = JSON.stringify(dataString);
+                                                    /*var obj={};
+                                                    obj.d = [{'CompanyName':CompanyName,'job_id':job_id,'html':html },{'job_id':job_id},{'html':html}];*/
+                                                    datasend = "CompanyName"+"="+(CompanyName)+"&jobid"+"="+(jobid)+"&html"+"="+(html);
+                                                    $.ajax({
+                                                        type: 'POST',
+                                                        url: 'admin_form.php',
+                                                        data : datasend,
+                                                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8', 
+                                                        success: function(response){
+                                                            if(response=="Successful"){
+                                                                alert('Form successfully sent');
+                                                            }
+                                                            else
+                                                                alert('Form not inserted');
+                                                        }
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                    <div class="tab-pane fade" id="custom-nav-profile" role="tabpanel" aria-labelledby="custom-nav-profile-tab">
+                                        <div id="resp">
+                                            <br>
+                                            <br>
+                                            <h5> 565 Responses Received </h5>
+                                            <br>
+                                            <br>
+                                            <ul>
+                                                <li> 258 Responses From CSE </li>
+                                                <li> 158 Responses From ECE </li>
+                                                <li> 149 Responses from MECH </li>
+                                                <div class="card-footer">
+                                                    <button type="submit" class="btn btn-success btn-sm">
+                                                        <i class="fa"></i> Submit To HR
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of custom main -->
+                        </div>
+                    </div> <!-- End -->
+                </div> <!-- End of Captain -->
+            </div>
+        </div>
+        <!-- Jquery JS-->
+       
+        <!-- Bootstrap JS-->
+        <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+        <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+        <!-- Vendor JS       -->
+        <script src="vendor/slick/slick.min.js"></script>
+        <script src="vendor/wow/wow.min.js"></script>
+        <script src="vendor/animsition/animsition.min.js"></script>
+        <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendor/counter-up/jquery.counterup.min.js"></script>
+        <script src="vendor/circle-progress/circle-progress.min.js"></script>
+        <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+        <script src="vendor/select2/select2.min.js"></script>
+
+        <!-- Main JS-->
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>
+<!-- end document-->

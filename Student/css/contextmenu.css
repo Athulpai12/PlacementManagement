@@ -1,0 +1,26 @@
+.wrap {
+  max-width: 200px;
+  min-width: 200px;
+  background-color: #262626;
+  position: absolute;
+  display: none;
+  padding: 5px 0;
+  z-index: 999999999;
+  box-shadow: 0 2px 6px rgba(0,0,0,.5)
+}
+.wrap ul li {
+  display: block;
+  padding: 10px;
+  list-style: none;
+  color: #fff;
+  cursor: default;
+}
+.wrap ul li:hover {
+  background-color: #e95e1e;
+}
+.display {
+  display: block;
+}
+#fakebutton{
+  visibility: hidden;
+}

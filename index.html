@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome To Placement Management System</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="form">
+  	<div>
+  		<h1 style="color: white;font-weight: bold;" align="center">Placement Management System</h1>
+  	</div>
+    <ul class="tab-group">
+      <li class="tab active"><a href="#signup">Sign Up</a></li>
+      <li class="tab"><a href="#login">Log In</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="signup">   
+        <h1>Sign Up</h1>
+        <form id="form_signup">
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                  First Name<span class="req">*</span>
+                </label>
+                <input type="text" id="fstname" name="fstname" required autocomplete="off"/>
+            </div>
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+                <input type="text" id="lstname" name="lstname" required autocomplete="off"/>
+            </div>
+          </div>
+          <div class="field-wrap">
+            <label>
+                Unique ID<span class="req">*</span>
+            </label>
+            <input type="text" id="uid" name="uid" required autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+                Email<span class="req">*</span>
+            </label>
+            <input type="email" id="email" name="email" required autocomplete="off"/>
+          </div>
+          <!--   PASSWORD WILL BE SENT VIA EMAIL
+          <div class="field-wrap">
+            <label>
+              Set a Password<span class="req">*</span>
+            </label>
+            <input type="password" id="password" name="password" onblur="checkPassword(this)" required autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+              Verify Password<span class="req">*</span>
+            </label>
+            <input type="password" id="verifypassword" name="password" onblur="verifyPassword(this)" required autocomplete="off"/>
+          </div>
+          -->
+          <button type="button" form="form_signup" id="submit_signup" name="signup" onclick="postRegistration()" class="button button-block">Register</button>
+        </form>
+      </div>
+      <div id="login">   
+        <h1>Welcome Back</h1>
+        <form id="form_login" action="index.php" method="post">
+          <div class="field-wrap">
+            <label>
+                Unique ID<span class="req">*</span>
+            </label>
+            <input type="text" id="login_uid" name ="uid" onblur="" required autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+                Password<span class="req">*</span>
+            </label>
+            <input type="password" id="login_pd" name="uspd" required autocomplete="off"/>
+          </div>
+          <p class="forgot" id="forge">
+            <a href="forgotpassword.html">Forgot Password?</a>
+          </p>
+          <button type="button" form="form_login" name="login" onclick="postLogin()" class="button button-block"/>Log In</button>
+        </form>
+      </div>
+    </div><!-- tab-content -->
+  </div> <!-- /form -->
+  <div class='help'>
+  	<a href="help.html">
+  		<h3 style="color: white;" align="center">Need Help?</h3>
+  	</a>
+  </div>
+  <script src='js/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
