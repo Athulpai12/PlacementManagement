@@ -1,2 +1,2 @@
 # PlacementManagement
-A web software for managing placement related details for pes students
+A web software for managing placement activities for PES University students.
